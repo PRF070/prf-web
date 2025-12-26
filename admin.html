@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>TRF Admin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!--
+  I'm adding this to it for the purpose of UI using JS alert is a bad way of using UI
+  -->
+  <div class="dialog_modal">
+    <div class="message_box">
+      <div class="message_icon">✔️</div>
+      <div class="message">
+        Admin successfully logged in
+      </div>
+    </div>
+    
+    <div class="upload_animations">
+      <div class="u_a_wrapper">
+        <div class="u_a" style="--i: 0s;"></div>
+        <div class="u_a" style="--i: .5s;"></div>
+        <div class="u_a" style="--i: 1s;"></div>
+        <div class="u_a" style="--i: 1.5s;"></div>
+      </div>
+      <div class="u_a_message">
+        Uploading
+      </div>
+    </div>
+  </div>
+  <h2 style="text-align:center;">Admin Login</h2>
+  
+  <div class="admin">
+    <input type="email" id="email" placeholder="Admin Email">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+  
+  <hr>
+  
+  <div class="admin" id="dashboard" style="display:none;">
+    <h3>Create Post</h3>
+    <textarea id="postText" placeholder="Write something..."></textarea>
+    <input type="file" id="postImage">
+    <input type="file" id="postVideo">
+    <input type="color" id="bgColor" value="#ffffff">
+    <button onclick="addPost()">Post</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="admin.js"></script>
+  
+</body>
+
+</html>
