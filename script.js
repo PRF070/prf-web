@@ -36,3 +36,7 @@ async function loadPosts() {
 }
 
 loadPosts();
+
+
+let img = document.querySelectorAll('img');
+img.forEach(img => {img.setAttribute("loading", "lazy")})
